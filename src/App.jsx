@@ -1,5 +1,5 @@
-import "./styles.css"
-
-export default function App (){
-  return "Hi";
+function App() {
+  return;
 }
+
+export default App;
