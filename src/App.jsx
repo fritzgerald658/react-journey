@@ -1,7 +1,10 @@
+import ToggleDarkMode from "./PracticeReact.jsx";
 function App() {
   return (
     <>
-      <h1>Counter</h1>
+      <ToggleDarkMode />
     </>
   );
 }
+
+export default App;
