@@ -1,7 +1,7 @@
-import Header from "./Header.jsx";
-
 function App() {
-  return <Header />;
+  return (
+    <>
+      <h1>Counter</h1>
+    </>
+  );
 }
-
-export default App;
