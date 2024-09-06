@@ -109,30 +109,54 @@ function Header() {
   );
 }
 
-function MainContent() {
+function MainContent({ title, content, buttonText, linkText, linkUrl }) {
   return (
     <>
       <div className="main-container">
-        <h1>Startup Framework</h1>
-        <p>
-          We made it so beutiful and simple. It combines <br />
-          landings, pages, blogs and shop screens. It is definitely <br />
-          the tool you need in your collection!
-        </p>
+        <h1>{title}</h1>
+        <p>{content}</p>
         <div className="call-to-action">
-          <button>Purchase Now for $248</button>
-          <a href="#">Learn More</a>
+          <button>{buttonText}</button>
+          <a href={linkUrl}>{linkText}</a>
         </div>
       </div>
     </>
   );
 }
 
+function BibleBooks() {
+  const bible = [
+    { id: 0, bookName: "Genesis", testament: "Old" },
+    { id: 1, bookName: "Matthew", testament: "New" },
+    { id: 2, bookName: "Jeremiah", testament: "Old" },
+  ];
+
+  const displayBooks = bible.map((book) => (
+    <ul>
+      <li key={book.id}>Book: {book.bookName}</li>
+      <li key={book.id}>Testament: {book.testament}</li>
+    </ul>
+  ));
+  return (
+    <>
+      <ul>{displayBooks}</ul>
+    </>
+  );
+}
 export default function Page() {
   return (
     <>
-      <Header />
-      <MainContent />
+      {/* <div className="hero-section">
+        <Header />
+        <MainContent
+          title="Startup Framework"
+          content="We made it so beautiful and simple."
+          buttonText="Purchase now for $248"
+          linkText="Learn More"
+          linkUrl="#"
+        />
+      </div> */}
+      <BibleBooks />
     </>
   );
 }

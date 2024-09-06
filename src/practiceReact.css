@@ -7,7 +7,9 @@
   --primary-color: #25dac5;
   --text-color: #15143966;
 }
-
+.hero-section {
+  height: 100vh;
+}
 header {
   margin: 0%;
   display: flex;
