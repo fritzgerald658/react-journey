@@ -109,10 +109,30 @@ function Header() {
   );
 }
 
+function MainContent() {
+  return (
+    <>
+      <div className="main-container">
+        <h1>Startup Framework</h1>
+        <p>
+          We made it so beutiful and simple. It combines <br />
+          landings, pages, blogs and shop screens. It is definitely <br />
+          the tool you need in your collection!
+        </p>
+        <div className="call-to-action">
+          <button>Purchase Now for $248</button>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </>
+  );
+}
+
 export default function Page() {
   return (
     <>
       <Header />
+      <MainContent />
     </>
   );
 }

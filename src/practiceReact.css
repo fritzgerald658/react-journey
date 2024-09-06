@@ -28,6 +28,11 @@ header nav {
 nav a {
   text-decoration: none;
   color: var(--text-color);
+  transition: 0.3s;
+}
+nav a:hover {
+  text-decoration: none;
+  color: var(--color-accent);
 }
 
 /*button styles */
@@ -49,6 +54,11 @@ nav a {
   border: none;
   background-color: white;
   color: var(--text-color);
+  transition: 0.3s;
+}
+
+.sign-in:hover {
+  color: var(--color-accent);
 }
 
 .sign-up {
@@ -56,4 +66,63 @@ nav a {
   color: white;
   border: none;
   border-radius: 18px;
+  transition: 0.3s;
+}
+
+.sign-up:hover {
+  background-color: var(--color-accent);
+}
+
+/* style for main-content */
+
+.main-container {
+  text-align: center;
+}
+
+.main-container h1 {
+  font-size: 4.5rem;
+  font-family: var(--primary-font);
+  color: var(--color-accent);
+  letter-spacing: 2px;
+}
+
+.main-container p {
+  font-size: 1.37rem;
+  font-family: var(--primary-font);
+  color: var(--text-color);
+}
+
+.call-to-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.call-to-action button {
+  cursor: pointer;
+  margin: 1.1rem 0;
+  font-family: var(--primary-font);
+  font-size: 1.25rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  transition: 0.3s;
+  padding: 17px 41px;
+}
+
+.call-to-action button:hover {
+  background-color: var(--color-accent);
+}
+
+.call-to-action a {
+  font-size: 1.125rem;
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.call-to-action a:hover {
+  text-decoration: underline;
 }
