@@ -1,8 +1,10 @@
-import ToggleDarkMode from "./PracticeReact.jsx";
+import "./PracticeReact.jsx";
+import NavBar from "./PracticeReact.jsx";
+import "./practiceReact.css";
 function App() {
   return (
     <>
-      <ToggleDarkMode />
+      <NavBar />
     </>
   );
 }

@@ -1,7 +1,13 @@
-div {
-  height: 100vh;
+.navbar-container {
+  display: flex;
 }
 
-.dark-mode {
-  background-color: rgb(17, 17, 17);
+.navbar-container a {
+  text-decoration: none;
+  padding: 0.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  color: black;
+  border: 1px solid black;
+  margin: 0.8rem;
 }
