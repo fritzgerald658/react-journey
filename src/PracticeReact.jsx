@@ -2,6 +2,9 @@ import { useState } from "react";
 import "./practiceReact.css";
 import logo from "./assets/logo.svg";
 import search from "./assets/fa-search.svg";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 // function ToggleDarkMode() {
 //   const [darkMode, setToDarkMode] = useState(false);
 
@@ -144,32 +147,17 @@ import search from "./assets/fa-search.svg";
 //   );
 // }
 
-function AboutMe() {
-  const fritz = {
-    name: "Fritz",
-    age: 23,
-    hobby: "Playing Guitar",
-    dream: "Front-End Developer",
-    personality: "Introvert",
-    personality2: "Insecure",
-  };
-
-  return (
-    <>
-      <h1>{name}</h1>
-      <p>{age}</p>
-      <p>{hobby}</p>
-      <p>{dream}</p>
-      <p>{personality}</p>
-      <p>{personality2}</p>
-    </>
-  );
-}
-
 export default function Page() {
+  const [nav, setNav] = useState(true);
+
+  const openMenu = () => {
+    setNav(!nav);
+  };
   return (
     <>
-      <AboutMe />
+      <div className="container" onClick={openMenu} style={"transition: 0.3s"}>
+        {!nav ? <CloseOutlinedIcon /> : <MenuOutlinedIcon />}
+      </div>
     </>
   );
 }
