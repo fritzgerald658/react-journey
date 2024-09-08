@@ -156,19 +156,19 @@ export default function Page() {
   return (
     <>
       <div
-        className="container mt-4 p-3 d-flex justify-content-end "
+        className="container mt-4 p-3 d-flex justify-content-end  "
         onClick={openMenu}
         style={{ transition: 0.3 }}
       >
         {!nav ? <CloseOutlinedIcon /> : <MenuOutlinedIcon />}
       </div>
 
-      <div className="container">
+      <div className="container-fluid p-0">
         <nav
           className={
             !nav
-              ? "d-flex flex-column text-primary bg-black w-75 h-100"
-              : "d-flex flex-column text-primary bg-black w-75 positon-absolute h-100"
+              ? "d-flex flex-column text-primary bg-black w-75 position-absolute top-0 h-100 visible"
+              : "d-flex flex-column text-primary bg-black w-75 position-absolute h-100 top-0 invisible"
           }
         >
           <a href="#" className="text-decoration-none p-3">

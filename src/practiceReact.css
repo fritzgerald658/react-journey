@@ -3,5 +3,11 @@
 }
 
 nav {
+  background-color: aliceblue;
   transition: 0.3s;
+}
+
+.nav-open {
+  position: absolute;
+  right: 100;
 }
