@@ -155,8 +155,35 @@ export default function Page() {
   };
   return (
     <>
-      <div className="container" onClick={openMenu} style={"transition: 0.3s"}>
+      <div
+        className="container mt-4 p-3 d-flex justify-content-end "
+        onClick={openMenu}
+        style={{ transition: 0.3 }}
+      >
         {!nav ? <CloseOutlinedIcon /> : <MenuOutlinedIcon />}
+      </div>
+
+      <div className="container">
+        <nav
+          className={
+            !nav
+              ? "d-flex flex-column text-primary bg-black w-75 h-100"
+              : "d-flex flex-column text-primary bg-black w-75 positon-absolute h-100"
+          }
+        >
+          <a href="#" className="text-decoration-none p-3">
+            Home
+          </a>
+          <a href="#" className="text-decoration-none p-3">
+            About
+          </a>
+          <a href="#" className="text-decoration-none p-3">
+            Projects
+          </a>
+          <a href="#" className="text-decoration-none p-3">
+            Contact Me
+          </a>
+        </nav>
       </div>
     </>
   );
