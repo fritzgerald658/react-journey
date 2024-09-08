@@ -79,84 +79,97 @@ import search from "./assets/fa-search.svg";
 //     </>
 //   );
 // }
-function NavButton({ signInLabel, signUpLabel }) {
+// function NavButton({ signInLabel, signUpLabel }) {
+//   return (
+//     <>
+//       <div className="btn-container">
+//         <button className="sign-in">{signInLabel}</button>
+//         <button className="sign-up">{signUpLabel}</button>
+//       </div>
+//     </>
+//   );
+// }
+
+// function Header() {
+//   return (
+//     <>
+//       <header>
+//         <img src={logo} alt="start-up 3 logo" />
+//         <nav>
+//           <a href="#">Home</a>
+//           <a href="#">Features</a>
+//           <a href="#">Blog</a>
+//           <a href="#">Shop</a>
+//         </nav>
+//         <div className="nav-btn-container">
+//           <NavButton signInLabel="Sign In" signUpLabel="Sign Up" />
+//         </div>
+//       </header>
+//     </>
+//   );
+// }
+
+// function MainContent({ title, content, buttonText, linkText, linkUrl }) {
+//   return (
+//     <>
+//       <div className="main-container">
+//         <h1>{title}</h1>
+//         <p>{content}</p>
+//         <div className="call-to-action">
+//           <button>{buttonText}</button>
+//           <a href={linkUrl}>{linkText}</a>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
+
+// function BibleBooks() {
+//   const bible = [
+//     { id: 0, bookName: "Genesis", testament: "Old" },
+//     { id: 1, bookName: "Matthew", testament: "New" },
+//     { id: 2, bookName: "Jeremiah", testament: "Old" },
+//   ];
+
+//   const displayBooks = bible.map((book) => (
+//     <ul>
+//       <li key={book.id}>Book: {book.bookName}</li>
+//       <li key={book.id}>Testament: {book.testament}</li>
+//     </ul>
+//   ));
+//   return (
+//     <>
+//       <ul>{displayBooks}</ul>
+//     </>
+//   );
+// }
+
+function AboutMe() {
+  const fritz = {
+    name: "Fritz",
+    age: 23,
+    hobby: "Playing Guitar",
+    dream: "Front-End Developer",
+    personality: "Introvert",
+    personality2: "Insecure",
+  };
+
   return (
     <>
-      <div className="btn-container">
-        <button className="sign-in">{signInLabel}</button>
-        <button className="sign-up">{signUpLabel}</button>
-      </div>
+      <h1>{name}</h1>
+      <p>{age}</p>
+      <p>{hobby}</p>
+      <p>{dream}</p>
+      <p>{personality}</p>
+      <p>{personality2}</p>
     </>
   );
 }
 
-function Header() {
-  return (
-    <>
-      <header>
-        <img src={logo} alt="start-up 3 logo" />
-        <nav>
-          <a href="#">Home</a>
-          <a href="#">Features</a>
-          <a href="#">Blog</a>
-          <a href="#">Shop</a>
-        </nav>
-        <div className="nav-btn-container">
-          <NavButton signInLabel="Sign In" signUpLabel="Sign Up" />
-        </div>
-      </header>
-    </>
-  );
-}
-
-function MainContent({ title, content, buttonText, linkText, linkUrl }) {
-  return (
-    <>
-      <div className="main-container">
-        <h1>{title}</h1>
-        <p>{content}</p>
-        <div className="call-to-action">
-          <button>{buttonText}</button>
-          <a href={linkUrl}>{linkText}</a>
-        </div>
-      </div>
-    </>
-  );
-}
-
-function BibleBooks() {
-  const bible = [
-    { id: 0, bookName: "Genesis", testament: "Old" },
-    { id: 1, bookName: "Matthew", testament: "New" },
-    { id: 2, bookName: "Jeremiah", testament: "Old" },
-  ];
-
-  const displayBooks = bible.map((book) => (
-    <ul>
-      <li key={book.id}>Book: {book.bookName}</li>
-      <li key={book.id}>Testament: {book.testament}</li>
-    </ul>
-  ));
-  return (
-    <>
-      <ul>{displayBooks}</ul>
-    </>
-  );
-}
 export default function Page() {
   return (
     <>
-      {/* <div className="hero-section">
-        <Header />
-        <MainContent
-          title="Startup Framework"
-          content="We made it so beautiful and simple."
-          buttonText="Purchase now for $248"
-          linkText="Learn More"
-          linkUrl="#"
-        />
-      </div> */}
-      <BibleBooks />
+      <AboutMe />
     </>
   );
 }
