@@ -1,11 +1,11 @@
 import "./PracticeReact.jsx";
 import "./practiceReact.css";
 import "./app.css";
-import Page from "./PracticeReact.jsx";
+import ImageModal from "./PracticeReact.jsx";
 function App() {
   return (
     <>
-      <Page />
+      <ImageModal />
     </>
   );
 }

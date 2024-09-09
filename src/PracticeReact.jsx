@@ -5,6 +5,7 @@ import search from "./assets/fa-search.svg";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
+import pngcircle from "./assets/pngcircle.png";
 // function ToggleDarkMode() {
 //   const [darkMode, setToDarkMode] = useState(false);
 
@@ -147,7 +148,7 @@ import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 //   );
 // }
 
-export default function Page() {
+function Page() {
   const [nav, setNav] = useState(true);
 
   const openMenu = () => {
@@ -190,3 +191,31 @@ export default function Page() {
     </>
   );
 }
+
+function ImageModal() {
+  const images = [pngcircle, pngcircle, pngcircle];
+  const [imageClicked, setImageClicked] = useState(false);
+
+  const handleModalClicked = (e) => {
+    setImageClicked(!imageClicked);
+  };
+  return (
+    <>
+      <div className="container-fluid">
+        <div className="container d-flex justify-content-center p-3 m-5 gap-5">
+          {images.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt=""
+              onClick={handleModalClicked}
+              className={!imageClicked ? "image-clicked" : ""}
+            />
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default ImageModal;

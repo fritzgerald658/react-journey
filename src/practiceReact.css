@@ -1,7 +1,7 @@
-.container-fluid {
+/* .container-fluid {
   transition: 0.3s ease-in-out;
   background-color: #181818;
-}
+} */
 
 nav {
   background-color: #181818;
@@ -35,4 +35,16 @@ nav a:hover {
   #mobile-nav {
     visibility: visible;
   }
+}
+
+/*modal*/
+
+img {
+  height: 100px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.image-clicked {
+  border: 2px solid red;
 }
