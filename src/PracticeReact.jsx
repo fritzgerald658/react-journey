@@ -155,34 +155,37 @@ export default function Page() {
   };
   return (
     <>
-      <div
-        className="container-fluid p-3 d-flex justify-content-end text-white"
-        onClick={openMenu}
-      >
-        {!nav ? <CloseOutlinedIcon /> : <MenuOutlinedIcon />}
-      </div>
-
-      <div className="container-fluid p-0">
-        <nav
-          className={
-            !nav
-              ? "d-flex text-center flex-column text-white text-white nav-open"
-              : "d-flex text-center flex-column text-white text-white nav-closed"
-          }
+      <div id="mobile-nav">
+        <div
+          className="container-fluid p-3 d-flex justify-content-end text-white"
+          id="mobile-nav"
+          onClick={openMenu}
         >
-          <a href="#" className="text-decoration-none p-3 text-white">
-            Home
-          </a>
-          <a href="#" className="text-decoration-none p-3 text-white">
-            About
-          </a>
-          <a href="#" className="text-decoration-none p-3 text-white">
-            Projects
-          </a>
-          <a href="#" className="text-decoration-none p-3 text-white">
-            Contact Me
-          </a>
-        </nav>
+          {!nav ? <CloseOutlinedIcon /> : <MenuOutlinedIcon />}
+        </div>
+
+        <div className="container-fluid p-0">
+          <nav
+            className={
+              !nav
+                ? "d-flex text-center flex-column nav-open"
+                : "d-flex text-center flex-column nav-closed"
+            }
+          >
+            <a href="#" className="text-decoration-none p-3 text-white">
+              Home
+            </a>
+            <a href="#" className="text-decoration-none p-3 text-white">
+              About
+            </a>
+            <a href="#" className="text-decoration-none p-3 text-white">
+              Projects
+            </a>
+            <a href="#" className="text-decoration-none p-3 text-white">
+              Contact Me
+            </a>
+          </nav>
+        </div>
       </div>
     </>
   );
