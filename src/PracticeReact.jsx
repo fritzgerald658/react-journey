@@ -233,21 +233,37 @@ function Page() {
 // }
 
 function Modal() {
+  const images = [demoPic3];
   const [modal, setModal] = useState(false);
+  const [modalImage, setModalImage] = useState(null);
+
+  const openModal = (index) => {
+    setModalImage(images[index]);
+    setModal(true);
+  };
+
+  const closeModal = () => {
+    setModal(false);
+  };
   return (
     <>
       <div
         className="container d-flex justify-content-start mt-3"
         id="modal-trigger"
       >
-        <img key={0} src={demoPic3} alt="" onClick={() => openModal(index)} />
+        {images.map((src, index) => (
+          <img key={index} src={src} alt="" onClick={() => openModal(index)} />
+        ))}
       </div>
-      <div
-        className="container-fluid justify-content-center p-5"
-        id="modal-content"
-      >
-        <img src={demoPic3} alt="" />
-      </div>
+      {modal && (
+        <div
+          className="container-fluid justify-content-center p-5"
+          id="modal-content"
+        >
+          <img src={modalImage} alt="" />
+          <span onClick={closeModal}>x</span>
+        </div>
+      )}
     </>
   );
 }

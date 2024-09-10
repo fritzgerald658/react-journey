@@ -51,7 +51,7 @@ nav a:hover {
 }
 
 #modal-content {
-  display: none;
+  display: flex;
   height: 100vh;
   width: 100vw;
   position: absolute;
@@ -61,6 +61,30 @@ nav a:hover {
 }
 
 #modal-content img {
-  width: 60%;
+  width: 100%;
   height: auto;
+  animation-name: zoom;
+  animation-duration: 0.5s;
+  border-radius: 20px;
+}
+span {
+  position: absolute;
+  color: rgb(185, 185, 185);
+  cursor: pointer;
+  font-size: 4rem;
+  left: 100px;
+  transition: 0.3s;
+}
+
+span:hover {
+  color: white;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
