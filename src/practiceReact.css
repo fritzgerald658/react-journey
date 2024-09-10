@@ -38,21 +38,29 @@ nav a:hover {
 }
 
 /*modal*/
-* {
-  box-sizing: border-box;
-}
-/* .gallery-pictures-option-container {
-  border: 1px solid blue;
-} */
-#gallery-pictures-option {
+#modal-trigger img {
+  cursor: pointer;
   height: auto;
-  width: 100%;
+  width: 25%;
+
+  border-radius: 20px; /* set rounded edges */
 }
 
-#gallery-pictures-selected-container {
-  border: 1px solid blue;
+#modal-trigger img:hover {
+  opacity: 0.8;
 }
-#gallery-pictures-selected img {
-  width: 100%;
+
+#modal-content {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  background-color: #18181869;
+}
+
+#modal-content img {
+  width: 60%;
   height: auto;
 }

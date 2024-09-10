@@ -233,9 +233,19 @@ function Page() {
 // }
 
 function Modal() {
+  const [modal, setModal] = useState(false);
   return (
     <>
-      <div className="container d-flex justify-content-center">
+      <div
+        className="container d-flex justify-content-start mt-3"
+        id="modal-trigger"
+      >
+        <img key={0} src={demoPic3} alt="" onClick={() => openModal(index)} />
+      </div>
+      <div
+        className="container-fluid justify-content-center p-5"
+        id="modal-content"
+      >
         <img src={demoPic3} alt="" />
       </div>
     </>
