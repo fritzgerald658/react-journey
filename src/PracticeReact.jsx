@@ -195,13 +195,19 @@ function Page() {
 function ImageModal() {
   const images = [pngcircle, pngcircle, pngcircle];
   const [imageClicked, setImageClicked] = useState(null);
+<<<<<<< HEAD
   console.log(imageClicked);
 
   const handleModalClick = (index) => {
+=======
+
+  const handleModalClicked = (index) => {
+>>>>>>> 932befee8c8b9fad1ac68d6c2ec4e47bbdd2e3af
     setImageClicked((prevIndex) => (prevIndex === index ? null : index));
   };
   return (
     <>
+<<<<<<< HEAD
       <div className="container d-flex justify-content-center mt-5 gap-3 p-4">
         {images.map((src, index) => (
           <img
@@ -212,6 +218,20 @@ function ImageModal() {
             className={imageClicked === index ? "image-clicked" : ""}
           />
         ))}
+=======
+      <div className="container-fluid">
+        <div className="container d-flex justify-content-center p-3 m-5 gap-5">
+          {images.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt=""
+              onClick={() => handleModalClicked(index)}
+              className={imageClicked === index ? "image-clicked" : ""}
+            />
+          ))}
+        </div>
+>>>>>>> 932befee8c8b9fad1ac68d6c2ec4e47bbdd2e3af
       </div>
     </>
   );
