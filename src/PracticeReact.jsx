@@ -194,25 +194,24 @@ function Page() {
 
 function ImageModal() {
   const images = [pngcircle, pngcircle, pngcircle];
-  const [imageClicked, setImageClicked] = useState(false);
+  const [imageClicked, setImageClicked] = useState(null);
+  console.log(imageClicked);
 
-  const handleModalClicked = (e) => {
-    setImageClicked(!imageClicked);
+  const handleModalClick = (index) => {
+    setImageClicked((prevIndex) => (prevIndex === index ? null : index));
   };
   return (
     <>
-      <div className="container-fluid">
-        <div className="container d-flex justify-content-center p-3 m-5 gap-5">
-          {images.map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt=""
-              onClick={handleModalClicked}
-              className={!imageClicked ? "image-clicked" : ""}
-            />
-          ))}
-        </div>
+      <div className="container d-flex justify-content-center mt-5 gap-3 p-4">
+        {images.map((src, index) => (
+          <img
+            key={index}
+            src={src}
+            alt={src}
+            onClick={() => handleModalClick(index)}
+            className={imageClicked === index ? "image-clicked" : ""}
+          />
+        ))}
       </div>
     </>
   );
