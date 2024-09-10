@@ -194,10 +194,10 @@ function Page() {
 
 function ImageModal() {
   const images = [pngcircle, pngcircle, pngcircle];
-  const [imageClicked, setImageClicked] = useState(false);
+  const [imageClicked, setImageClicked] = useState(null);
 
-  const handleModalClicked = (e) => {
-    setImageClicked(!imageClicked);
+  const handleModalClicked = (index) => {
+    setImageClicked((prevIndex) => (prevIndex === index ? null : index));
   };
   return (
     <>
@@ -208,8 +208,8 @@ function ImageModal() {
               key={index}
               src={src}
               alt=""
-              onClick={handleModalClicked}
-              className={!imageClicked ? "image-clicked" : ""}
+              onClick={() => handleModalClicked(index)}
+              className={imageClicked === index ? "image-clicked" : ""}
             />
           ))}
         </div>
