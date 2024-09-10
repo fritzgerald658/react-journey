@@ -6,6 +6,10 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import pngcircle from "./assets/pngcircle.png";
+import demoPic1 from "./assets/demo-pic1.jpg";
+import demoPic2 from "./assets/demo-pic2.jpg";
+import demoPic3 from "./assets/demo-pic3.jpg";
+import demoPic4 from "./assets/demo-pic4.jpg";
 // function ToggleDarkMode() {
 //   const [darkMode, setToDarkMode] = useState(false);
 
@@ -192,39 +196,49 @@ function Page() {
   );
 }
 
-function ImageModal() {
-  const images = [pngcircle, logo, search];
-  const [imageClicked, setImageClicked] = useState(null);
-  const [bigImageValue, setBigImagevalue] = useState(null);
-  console.log(imageClicked);
+// function ImageModal() {
+//   const images = [demoPic4, demoPic3, demoPic4, demoPic3];
+//   const [imageClicked, setImageClicked] = useState(null);
+//   const [bigImageValue, setBigImagevalue] = useState(null);
+//   console.log(imageClicked);
 
-  const handleModalClicked = (index) => {
-    setImageClicked((prevIndex) => (prevIndex === index ? null : index));
-    setBigImagevalue(images[index]);
-  };
+//   const handleModalClicked = (index) => {
+//     setImageClicked(index);
+//     setBigImagevalue(images[index]);
+//   };
 
+//   return (
+//     <>
+//       <div className="container ">
+//         <div className="row">
+//           {images.map((src, index) => (
+//             <div className="col-3">
+//               <img
+//                 id="gallery-pictures-option"
+//                 key={index}
+//                 src={src}
+//                 alt={src}
+//                 onClick={() => handleModalClicked(index)}
+//                 className={imageClicked === index ? "image-clicked" : ""}
+//               />
+//             </div>
+//           ))}
+//         </div>
+//         <div className="container" id="gallery-pictures-selected-container">
+//           <img src={bigImageValue} alt={bigImageValue} />
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
+
+function Modal() {
   return (
     <>
-      <div className="container d-flex justify-content-center mt-5 p-4 gap-3">
-        {images.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={src}
-            onClick={() => handleModalClicked(index)}
-            className={imageClicked === index ? "image-clicked" : ""}
-          />
-        ))}
-      </div>
-      <div className="container d-flex justify-content-center mt-5 p-4 gap-3">
-        <img
-          src={imageClicked === null ? "" : bigImageValue}
-          alt=""
-          className="BigImage"
-        />
+      <div className="container d-flex justify-content-center">
+        <img src={demoPic3} alt="" />
       </div>
     </>
   );
 }
-
-export default ImageModal;
+export default Modal;

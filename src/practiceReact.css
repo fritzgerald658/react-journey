@@ -38,17 +38,21 @@ nav a:hover {
 }
 
 /*modal*/
-
-img {
-  height: 100px;
-  background-color: transparent;
-  cursor: pointer;
+* {
+  box-sizing: border-box;
+}
+/* .gallery-pictures-option-container {
+  border: 1px solid blue;
+} */
+#gallery-pictures-option {
+  height: auto;
+  width: 100%;
 }
 
-.image-clicked {
-  border: 2px solid red;
+#gallery-pictures-selected-container {
+  border: 1px solid blue;
 }
-
-.BigImage {
-  height: 50vh;
+#gallery-pictures-selected img {
+  width: 100%;
+  height: auto;
 }
