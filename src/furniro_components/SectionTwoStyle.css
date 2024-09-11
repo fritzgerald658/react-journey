@@ -1,0 +1,18 @@
+:root {
+  --primary-color: #b88e2f;
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Montserrat", sans-serif;
+}
+#section-two-header h1 {
+  font-family: var(--primary-font);
+  color: #333333;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#section-two-header p {
+  font-family: var(--primary-font);
+  color: #333333;
+  font-weight: 400;
+  font-size: 1.25rem;
+}

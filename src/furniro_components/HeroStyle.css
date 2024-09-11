@@ -1,0 +1,82 @@
+:root {
+  --primary-color: #b88e2f;
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Montserrat", sans-serif;
+}
+
+#hero-parent-container {
+  height: 85vh;
+  background-image: url(../furniro_assets/furniro-hero-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.call-to-action-container {
+  background-color: #fff3e3;
+  border-radius: 0.5rem;
+}
+
+.call-to-action-container p {
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.call-to-action-container h2 {
+  font-family: var(--primary-font);
+  font-size: 3.25rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.call-to-action-container button {
+  font-family: var(--primary-font);
+  padding: 25px 72px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border: 1px solid var(--primary-color);
+  transition: 0.4s;
+}
+
+.call-to-action-container button:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.call-to-action-container article {
+  font-family: var(--primary-font);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 46px;
+}
+
+/* responsive */
+@media (max-width: 576px) {
+  .call-to-action-container button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+  .call-to-action-container p {
+    font-size: 0.875rem;
+  }
+
+  .call-to-action-container article {
+    font-size: 1rem;
+  }
+
+  .call-to-action-container h2 {
+    font-size: 1.875rem;
+  }
+
+  .call-to-action-container {
+    margin-top: 50px;
+  }
+}
