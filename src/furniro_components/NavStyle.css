@@ -1,0 +1,35 @@
+:root {
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Montserrat", sans-serif;
+}
+
+#heading-parent-container {
+  padding: 1.5rem 1.7rem;
+}
+
+.logo-container h3 {
+  cursor: pointer;
+  font-size: 2.3rem;
+  font-family: var(--secondary-font);
+  font-weight: 700;
+}
+
+.logo-container img {
+  cursor: pointer;
+}
+
+nav {
+  gap: 75px;
+}
+
+.nav-icons-container {
+  cursor: pointer;
+  gap: 45px;
+}
+
+nav a {
+  font-size: 1rem;
+  font-family: var(--primary-font);
+  color: #333333;
+  font-weight: 500;
+}
