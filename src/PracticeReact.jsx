@@ -267,27 +267,22 @@ import demoPic4 from "./assets/demo-pic4.jpg";
 //   );
 // }
 // export default Modal;
-function PracticeReact() {
-  const [name, setName] = useState("");
-  const [showGreeting, setShowGreeting] = useState(false);
-  const showInputText = (e) => {
-    setName(e.target.value);
-    setShowGreeting(false);
-  };
-  const showGreetingInHeading = () => {
-    setShowGreeting(true);
+const PracticeReact = () => {
+  const [color, setColor] = useState("");
+
+  const showFaveColor = (e) => {
+    setColor(e.target.value);
   };
   return (
-    <div className="container d-flex justify-content-center flex-column align-items-center mt-4">
-      <input
-        type="text"
-        placeholder="Enter your name"
-        onChange={showInputText}
-      />
-      <button onClick={showGreetingInHeading}>Enter</button>
-      <h1>Hello I am {showGreeting && name}</h1>
+    <div className="d-flex justify-content-center align-items-center mt-4 p-4 flex-column">
+      <h1>My favorite color is {color}</h1>
+      <select name="" id="" onChange={showFaveColor}>
+        <option value="Red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+      </select>
     </div>
   );
-}
+};
 
 export default PracticeReact;
