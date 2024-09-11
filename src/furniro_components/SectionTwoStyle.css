@@ -12,7 +12,32 @@
 
 #section-two-header p {
   font-family: var(--primary-font);
-  color: #333333;
+  color: #666666;
   font-weight: 400;
   font-size: 1.25rem;
+}
+
+#section-two-image-container p {
+  font-family: var(--primary-font);
+  color: black;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  #section-two-header h1 {
+    font-size: 1.5rem;
+  }
+
+  #section-two-header p {
+    font-size: 1rem;
+  }
+
+  #section-two-image-container p {
+    font-size: 1rem;
+  }
+
+  #section-two-image-container img {
+    width: 80%;
+  }
 }

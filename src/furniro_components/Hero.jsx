@@ -7,7 +7,7 @@ function Hero() {
         className="container-fluid d-flex justify-content-center align-items-center  px-2"
         id="hero-parent-container"
       >
-        <div className="container">
+        <div className="container px-4 px-md-0">
           <div className="row">
             <div className="col-lg-6"></div>
             <div className="col-lg-6">

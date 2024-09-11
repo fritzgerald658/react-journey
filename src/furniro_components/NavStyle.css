@@ -8,12 +8,6 @@
   padding: 1.875rem 3.375rem;
 }
 
-@media (max-width: 768px) {
-  #heading-parent-container {
-    padding: 1.7rem 1.7rem;
-  }
-}
-
 .logo-container h3 {
   cursor: pointer;
   font-size: 2.1rem;
@@ -68,5 +62,21 @@ nav a:hover::after {
   }
   to {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  #heading-parent-container {
+    padding: 1.7rem 1.7rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  nav {
+    gap: 35px;
+  }
+  .nav-icons-container {
+    cursor: pointer;
+    gap: 35px;
   }
 }
