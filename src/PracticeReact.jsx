@@ -12,7 +12,6 @@ import demoPic3 from "./assets/demo-pic3.jpg";
 import demoPic4 from "./assets/demo-pic4.jpg";
 // function ToggleDarkMode() {
 //   const [darkMode, setToDarkMode] = useState(false);
-
 //   const toggle = () => {
 //     setToDarkMode(!darkMode);
 //   };
@@ -152,49 +151,49 @@ import demoPic4 from "./assets/demo-pic4.jpg";
 //   );
 // }
 
-function Page() {
-  const [nav, setNav] = useState(true);
+// function Page() {
+//   const [nav, setNav] = useState(true);
 
-  const openMenu = () => {
-    setNav(!nav);
-  };
-  return (
-    <>
-      <div id="mobile-nav">
-        <div
-          className="container-fluid p-3 d-flex justify-content-end text-white"
-          id="mobile-nav"
-          onClick={openMenu}
-        >
-          {!nav ? <CloseOutlinedIcon /> : <MenuOutlinedIcon />}
-        </div>
+//   const openMenu = () => {
+//     setNav(!nav);
+//   };
+//   return (
+//     <>
+//       <div id="mobile-nav">
+//         <div
+//           className="container-fluid p-3 d-flex justify-content-end text-white"
+//           id="mobile-nav"
+//           onClick={openMenu}
+//         >
+//           {!nav ? <CloseOutlinedIcon /> : <MenuOutlinedIcon />}
+//         </div>
 
-        <div className="container-fluid p-0">
-          <nav
-            className={
-              !nav
-                ? "d-flex text-center flex-column nav-open"
-                : "d-flex text-center flex-column nav-closed"
-            }
-          >
-            <a href="#" className="text-decoration-none p-3 text-white">
-              Home
-            </a>
-            <a href="#" className="text-decoration-none p-3 text-white">
-              About
-            </a>
-            <a href="#" className="text-decoration-none p-3 text-white">
-              Projects
-            </a>
-            <a href="#" className="text-decoration-none p-3 text-white">
-              Contact Me
-            </a>
-          </nav>
-        </div>
-      </div>
-    </>
-  );
-}
+//         <div className="container-fluid p-0">
+//           <nav
+//             className={
+//               !nav
+//                 ? "d-flex text-center flex-column nav-open"
+//                 : "d-flex text-center flex-column nav-closed"
+//             }
+//           >
+//             <a href="#" className="text-decoration-none p-3 text-white">
+//               Home
+//             </a>
+//             <a href="#" className="text-decoration-none p-3 text-white">
+//               About
+//             </a>
+//             <a href="#" className="text-decoration-none p-3 text-white">
+//               Projects
+//             </a>
+//             <a href="#" className="text-decoration-none p-3 text-white">
+//               Contact Me
+//             </a>
+//           </nav>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
 
 // function ImageModal() {
 //   const images = [demoPic4, demoPic3, demoPic4, demoPic3];
@@ -232,39 +231,63 @@ function Page() {
 //   );
 // }
 
-function Modal() {
-  const images = [demoPic3];
-  const [modal, setModal] = useState(false);
-  const [modalImage, setModalImage] = useState(null);
+// function Modal() {
+//   const images = [demoPic3];
+//   const [modal, setModal] = useState(false);
+//   const [modalImage, setModalImage] = useState(null);
 
-  const openModal = (index) => {
-    setModalImage(images[index]);
-    setModal(true);
+//   const openModal = (index) => {
+//     setModalImage(images[index]);
+//     setModal(true);
+//   };
+
+//   const closeModal = () => {
+//     setModal(false);
+//   };
+//   return (
+//     <>
+//       <div
+//         className="container d-flex justify-content-start mt-3"
+//         id="modal-trigger"
+//       >
+//         {images.map((src, index) => (
+//           <img key={index} src={src} alt="" onClick={() => openModal(index)} />
+//         ))}
+//       </div>
+//       {modal && (
+//         <div
+//           className="container-fluid justify-content-center p-5"
+//           id="modal-content"
+//         >
+//           <img src={modalImage} alt="" />
+//           <span onClick={closeModal}>x</span>
+//         </div>
+//       )}
+//     </>
+//   );
+// }
+// export default Modal;
+function PracticeReact() {
+  const [name, setName] = useState("");
+  const [showGreeting, setShowGreeting] = useState(false);
+  const showInputText = (e) => {
+    setName(e.target.value);
+    setShowGreeting(false);
   };
-
-  const closeModal = () => {
-    setModal(false);
+  const showGreetingInHeading = () => {
+    setShowGreeting(true);
   };
   return (
-    <>
-      <div
-        className="container d-flex justify-content-start mt-3"
-        id="modal-trigger"
-      >
-        {images.map((src, index) => (
-          <img key={index} src={src} alt="" onClick={() => openModal(index)} />
-        ))}
-      </div>
-      {modal && (
-        <div
-          className="container-fluid justify-content-center p-5"
-          id="modal-content"
-        >
-          <img src={modalImage} alt="" />
-          <span onClick={}>x</span>
-        </div>
-      )}
-    </>
+    <div className="container d-flex justify-content-center flex-column align-items-center mt-4">
+      <input
+        type="text"
+        placeholder="Enter your name"
+        onChange={showInputText}
+      />
+      <button onClick={showGreetingInHeading}>Enter</button>
+      <h1>Hello I am {showGreeting && name}</h1>
+    </div>
   );
 }
-export default Modal;
+
+export default PracticeReact;
