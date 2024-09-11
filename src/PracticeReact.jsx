@@ -261,7 +261,7 @@ function Modal() {
           id="modal-content"
         >
           <img src={modalImage} alt="" />
-          <span onClick={closeModal}>x</span>
+          <span onClick={}>x</span>
         </div>
       )}
     </>
