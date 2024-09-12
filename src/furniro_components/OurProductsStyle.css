@@ -1,0 +1,36 @@
+:root {
+  --primary-color: #b88e2f;
+  --text-color: #333333;
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Montserrat", sans-serif;
+}
+
+.card {
+  border: none;
+}
+
+.card img {
+  border-radius: 0;
+}
+
+.card-body {
+  background-color: #f4f5f7;
+}
+.card-body h5 {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+#our-product-parent-container h1 {
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--text-color);
+}
+
+@media (max-width: 1400px) {
+  .card {
+    width: 10rem;
+  }
+}
