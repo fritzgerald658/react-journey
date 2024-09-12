@@ -8,6 +8,7 @@ import furniroGrifo from "../furniro_assets/furniro-grifo.jpg";
 import furniroLeviosa from "../furniro_assets/furniro-leviosa.jpg";
 import furniroRespira from "../furniro_assets/furniro-respira.jpg";
 import "../furniro_components/OurProductsStyle.css";
+
 function OurProductsCard({
   productImage,
   productTitle,
@@ -18,13 +19,12 @@ function OurProductsCard({
 }) {
   return (
     <>
-      <div
-        className="card "
-        style={{ width: "19rem", height: "auto", borderRadius: "0px" }}
-      >
-        <div>{productSaleRateBalloon}</div>
+      <div className="card">
         <img src={productImage} className="card-img-top" alt="..." />
         <div className="card-body">
+          <div className="sale-rate-balloon d-flex justify-content-center">
+            {productSaleRateBalloon}
+          </div>
           <h5 className="card-title">{productTitle}</h5>
           <p
             className="card-text"
@@ -68,9 +68,10 @@ function OurProducts() {
           <h1>Our Products</h1>
         </header>
         <div className="container d-flex justify-content-center">
-          <div className="row d-lg-flex justify-content-center">
+          <div className="container p-0 m-0 row d-lg-flex justify-content">
             <div className="col-12 col-lg-4 col-xl-3  col-md-6 d-flex justify-content-center d-lg-block p-lg-2 my-3">
               <OurProductsCard
+                productSaleRateBalloon="-50%"
                 productImage={furniroSyltherine}
                 productTitle="Syltherine"
                 productSubtitle="Stylish Cafe Chair"
@@ -80,32 +81,38 @@ function OurProducts() {
             </div>
             <div className="col-12 col-lg-4 col-xl-3  col-md-6 d-flex justify-content-center d-lg-block p-lg-2 my-3">
               <OurProductsCard
-                productImage={furniroSyltherine}
-                productTitle="Syltherine"
+                productSaleRateBalloon="-50%"
+                productImage={furniroLeviosa}
+                productTitle="Leviosa"
                 productSubtitle="Stylish Cafe Chair"
+                productSalePrice="PHP 2,500.199"
+                productOriginalPrice=""
+              />
+            </div>
+            <div className="col-12 col-lg-4 col-xl-3  col-md-6 d-flex justify-content-center d-lg-block p-lg-2 my-3">
+              <OurProductsCard
+                productSaleRateBalloon="-50%"
+                productImage={furniroLolito}
+                productTitle="Lolito"
+                productSubtitle="Luxury Big Sofa"
                 productSalePrice="PHP 1,666.399"
                 productOriginalPrice="PHP 2,332.958"
               />
             </div>
             <div className="col-12 col-lg-4 col-xl-3  col-md-6 d-flex justify-content-center d-lg-block p-lg-2 my-3">
               <OurProductsCard
-                productImage={furniroSyltherine}
-                productTitle="Syltherine"
-                productSubtitle="Stylish Cafe Chair"
-                productSalePrice="PHP 1,666.399"
-                productOriginalPrice="PHP 2,332.958"
-              />
-            </div>
-            <div className="col-12 col-lg-4 col-xl-3  col-md-6 d-flex justify-content-center d-lg-block p-lg-2 my-3">
-              <OurProductsCard
-                productImage={furniroSyltherine}
-                productTitle="Syltherine"
-                productSubtitle="Stylish Cafe Chair"
+                productSaleRateBalloon="-50%"
+                productImage={furniroMuggo}
+                productTitle="Muggo"
+                productSubtitle="Small Mug"
                 productSalePrice="PHP 1,666.399"
                 productOriginalPrice="PHP 2,332.958"
               />
             </div>
           </div>
+        </div>
+        <div className="container d-flex justify-content-center mt-4">
+          <button>SEE MORE</button>
         </div>
       </div>
     </>
