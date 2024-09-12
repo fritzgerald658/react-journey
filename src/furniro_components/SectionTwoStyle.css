@@ -42,6 +42,11 @@
   }
 }
 
+@media (max-width: 992px) {
+  #section-two-image-container img {
+    width: 50%;
+  }
+}
 @media (max-width: 1400px) {
   #section-two-image-container img {
     width: 95%;

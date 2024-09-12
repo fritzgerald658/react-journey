@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import furniroMuggo from "../furniro_assets/furniro-muggo.jpg";
 import furniroLolito from "../furniro_assets/furniro-lolito.jpg";
 import furniroPingky from "../furniro_assets/furniro-pingky.jpg";
@@ -8,6 +8,13 @@ import furniroGrifo from "../furniro_assets/furniro-grifo.jpg";
 import furniroLeviosa from "../furniro_assets/furniro-leviosa.jpg";
 import furniroRespira from "../furniro_assets/furniro-respira.jpg";
 import "../furniro_components/OurProductsStyle.css";
+import { IoShareSocialOutline } from "react-icons/io5";
+import { MdOutlineCompareArrows } from "react-icons/md";
+import { GoHeart } from "react-icons/go";
+import { IoShareSocial } from "react-icons/io5";
+import { GoArrowSwitch } from "react-icons/go";
+
+import { CiHeart } from "react-icons/ci";
 
 function OurProductsCard({
   productImage,
@@ -15,19 +22,57 @@ function OurProductsCard({
   productSubtitle,
   productSalePrice,
   productOriginalPrice,
-  productSaleRateBalloon,
+  saleRateBalloon,
+  newItemBalloon,
 }) {
+  const [overlay, setOverlay] = useState(false);
+
+  const activateOverlay = () => {
+    setOverlay(true);
+  };
   return (
     <>
       <div className="card">
+        <div className="container card-overlay" id="overlay-container">
+          <div
+            id="overlay"
+            className=" d-flex justify-content-center align-items-center"
+          >
+            <button className="add-to-cart">Add to cart</button>
+          </div>
+          <div
+            className="container d-flex justify-content-center align-items-center gap-4 mt-3"
+            id="product-interactive-buttons"
+          >
+            <span className="d-flex justify-content-center align-items-center gap-2">
+              <IoShareSocial size="1rem" />
+              Share
+            </span>
+            <span className="d-flex justify-content-center align-items-center gap-2">
+              <GoArrowSwitch size="1rem" />
+              Compare
+            </span>
+            <span className="d-flex justify-content-center align-items-center gap-2">
+              <GoHeart size="1rem" />
+              Like
+            </span>
+          </div>
+        </div>
+        {saleRateBalloon && (
+          <span className="sale-rate-balloon d-flex justify-content-center align-items-center">
+            {saleRateBalloon}
+          </span>
+        )}
+        {newItemBalloon && (
+          <span className="new-item-balloon d-flex justify-content-center align-items-center">
+            {newItemBalloon}
+          </span>
+        )}
         <img src={productImage} className="card-img-top" alt="..." />
         <div className="card-body">
-          <div className="sale-rate-balloon d-flex justify-content-center">
-            {productSaleRateBalloon}
-          </div>
-          <h5 className="card-title">{productTitle}</h5>
+          <h5 className="card-title my-1">{productTitle}</h5>
           <p
-            className="card-text"
+            className="card-text mx-0 my-1"
             style={{ color: "#898989", fontSize: "1rem", fontWeight: "500" }}
           >
             {productSubtitle}
@@ -37,8 +82,6 @@ function OurProductsCard({
               className="card-text m-0"
               style={{
                 color: "#333333",
-                fontSize: "1.25rem",
-                fontWeight: "500",
               }}
             >
               {productSalePrice}
@@ -47,8 +90,6 @@ function OurProductsCard({
               className="card-text"
               style={{
                 color: "#898989",
-                fontSize: "1rem",
-                fontWeight: "500",
               }}
             >
               <del>{productOriginalPrice}</del>
@@ -71,7 +112,7 @@ function OurProducts() {
           <div className="container p-0 m-0 row d-lg-flex justify-content">
             <div className="col-12 col-lg-4 col-xl-3  col-md-6 d-flex justify-content-center d-lg-block p-lg-2 my-3">
               <OurProductsCard
-                productSaleRateBalloon="-50%"
+                saleRateBalloon="-50%"
                 productImage={furniroSyltherine}
                 productTitle="Syltherine"
                 productSubtitle="Stylish Cafe Chair"
@@ -81,7 +122,7 @@ function OurProducts() {
             </div>
             <div className="col-12 col-lg-4 col-xl-3  col-md-6 d-flex justify-content-center d-lg-block p-lg-2 my-3">
               <OurProductsCard
-                productSaleRateBalloon="-50%"
+                newItemBalloon="New"
                 productImage={furniroLeviosa}
                 productTitle="Leviosa"
                 productSubtitle="Stylish Cafe Chair"
@@ -91,7 +132,7 @@ function OurProducts() {
             </div>
             <div className="col-12 col-lg-4 col-xl-3  col-md-6 d-flex justify-content-center d-lg-block p-lg-2 my-3">
               <OurProductsCard
-                productSaleRateBalloon="-50%"
+                saleRateBalloon="-30%"
                 productImage={furniroLolito}
                 productTitle="Lolito"
                 productSubtitle="Luxury Big Sofa"
@@ -101,7 +142,7 @@ function OurProducts() {
             </div>
             <div className="col-12 col-lg-4 col-xl-3  col-md-6 d-flex justify-content-center d-lg-block p-lg-2 my-3">
               <OurProductsCard
-                productSaleRateBalloon="-50%"
+                saleRateBalloon="-45%"
                 productImage={furniroMuggo}
                 productTitle="Muggo"
                 productSubtitle="Small Mug"
@@ -112,7 +153,7 @@ function OurProducts() {
           </div>
         </div>
         <div className="container d-flex justify-content-center mt-4">
-          <button>SEE MORE</button>
+          <button className="see-more-button">SEE MORE</button>
         </div>
       </div>
     </>

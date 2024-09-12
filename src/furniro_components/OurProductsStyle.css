@@ -6,10 +6,16 @@
 }
 
 .card {
+  cursor: pointer;
   border: none;
-  width: "25rem";
-  height: "auto";
-  border-radius: "0px";
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.card-overlay {
+  height: 100vh;
+  background-color: #3a3a3a;
+  opacity: 0.6;
 }
 
 .card img {
@@ -18,11 +24,44 @@
 
 .card-body {
   background-color: #f4f5f7;
+  padding: 1.5rem 1rem;
 }
 .card-body h5 {
   font-family: var(--primary-font);
   font-weight: 500;
   font-size: 1.5rem;
+}
+
+.card-prices-container p {
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+#overlay-container {
+  position: absolute;
+  top: 150px;
+  z-index: 10;
+}
+
+#product-interactive-buttons span {
+  font-family: var(--primary-font);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: white;
+}
+
+.add-to-cart {
+  background-color: white;
+  font-family: var(--primary-font);
+  padding: 1rem 4rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  border: 1px solid white;
+  transition: 0.4s;
 }
 
 #our-product-parent-container h1 {
@@ -32,7 +71,7 @@
   color: var(--text-color);
 }
 
-#our-product-parent-container button {
+#our-product-parent-container .see-more-button {
   font-family: var(--primary-font);
   padding: 1rem 4rem;
   border: none;
@@ -51,19 +90,37 @@
 }
 
 .sale-rate-balloon {
-  padding: 1rem;
+  position: absolute;
+  z-index: 10;
+  top: 25px;
+  right: 20px;
   font-size: 1rem;
   font-family: var(--primary-font);
   width: 50px;
   height: 50px;
   text-align: center;
-  align-items: center;
+  margin: auto;
   border-radius: 100%;
   background-color: #e97171;
+  margin: 0;
   color: white;
-  position: relative;
-  top: -350px;
-  left: 260px;
+}
+
+.new-item-balloon {
+  position: absolute;
+  z-index: 10;
+  top: 25px;
+  right: 20px;
+  font-size: 1rem;
+  font-family: var(--primary-font);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  margin: auto;
+  border-radius: 100%;
+  background-color: #2ec1ac;
+  margin: 0;
+  color: white;
 }
 
 @media (max-width: 768px) {
@@ -73,32 +130,5 @@
 
   #our-product-parent-container h1 {
     font-size: 2rem;
-  }
-}
-
-@media (min-width: 1400px) {
-  .sale-rate-balloon {
-    position: relative;
-    top: -320px;
-    left: 225px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .sale-rate-balloon {
-    position: relative;
-    top: -320px;
-    left: 225px;
-    /* position: relative;
-    top: -270px;
-    left: 180px; */
-  }
-}
-
-@media (min-width: 992px) {
-  .sale-rate-balloon {
-    position: relative;
-    top: -320px;
-    left: 220px;
   }
 }
