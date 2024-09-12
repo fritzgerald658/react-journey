@@ -41,3 +41,9 @@
     width: 80%;
   }
 }
+
+@media (max-width: 1400px) {
+  #section-two-image-container img {
+    width: 95%;
+  }
+}
