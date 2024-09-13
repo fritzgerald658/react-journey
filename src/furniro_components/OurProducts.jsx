@@ -158,10 +158,50 @@ function OurProducts() {
                 productOriginalPrice="PHP 2,332.958"
               />
             </div>
+            <div className="col-12 col-lg-4 col-xl-3  col-md-6 d-flex justify-content-center d-lg-block p-lg-2 my-3">
+              <OurProductsCard
+                saleRateBalloon="-50%"
+                productImage={furniroSyltherine}
+                productTitle="Syltherine"
+                productSubtitle="Stylish Cafe Chair"
+                productSalePrice="PHP 1,666.399"
+                productOriginalPrice="PHP 2,332.958"
+              />
+            </div>
+            <div className="col-12 col-lg-4 col-xl-3  col-md-6 d-flex justify-content-center d-lg-block p-lg-2 my-3">
+              <OurProductsCard
+                newItemBalloon="New"
+                productImage={furniroLeviosa}
+                productTitle="Leviosa"
+                productSubtitle="Stylish Cafe Chair"
+                productSalePrice="PHP 2,500.199"
+                productOriginalPrice=""
+              />
+            </div>
+            <div className="col-12 col-lg-4 col-xl-3  col-md-6 d-flex justify-content-center d-lg-block p-lg-2 my-3">
+              <OurProductsCard
+                saleRateBalloon="-30%"
+                productImage={furniroLolito}
+                productTitle="Lolito"
+                productSubtitle="Luxury Big Sofa"
+                productSalePrice="PHP 1,666.399"
+                productOriginalPrice="PHP 2,332.958"
+              />
+            </div>
+            <div className="col-12 col-lg-4 col-xl-3  col-md-6 d-flex justify-content-center d-lg-block p-lg-2 my-3">
+              <OurProductsCard
+                saleRateBalloon="-45%"
+                productImage={furniroMuggo}
+                productTitle="Muggo"
+                productSubtitle="Small Mug"
+                productSalePrice="PHP 1,666.399"
+                productOriginalPrice="PHP 2,332.958"
+              />
+            </div>
           </div>
         </div>
         <div className="container d-flex justify-content-center mt-4">
-          <button className="see-more-button">SEE MORE</button>
+          <button className="see-more-button">Show More</button>
         </div>
       </div>
     </>

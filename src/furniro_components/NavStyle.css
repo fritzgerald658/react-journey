@@ -43,7 +43,7 @@ nav a {
   font-weight: 600;
 }
 
-nav a::after {
+#desktop-nav nav a::after {
   content: "";
   height: 2px;
   background-color: var(--primary-color);
@@ -52,16 +52,48 @@ nav a::after {
   transition: 0.4s;
 }
 
-nav a:hover::after {
+#desktop-nav nav a:hover::after {
   width: 90%;
 }
 
+#mobile-nav {
+  border-top: 1px solid gray;
+  top: 95px;
+  width: 100%;
+  height: auto;
+  left: -400px;
+  z-index: 1;
+  animation: moveRight 0.5s ease-in-out forwards;
+}
+
+.mobile-nav-toggle {
+  left: 0;
+}
+
+#mobile-nav nav a {
+  border-bottom: 1px solid gray;
+  width: 60vw;
+  text-align: center;
+}
+
+#mobile-nav nav a:hover {
+  color: #b88e2f;
+}
 @keyframes zoom {
   from {
     transform: scale(0);
   }
   to {
     transform: scale(1);
+  }
+}
+
+@keyframes moveRight {
+  from {
+    left: -400px; /* Start position (off-screen) */
+  }
+  to {
+    left: 0; /* End position (fully visible on the screen) */
   }
 }
 
