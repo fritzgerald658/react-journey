@@ -63,11 +63,12 @@ nav a {
   height: auto;
   left: -400px;
   z-index: 1;
-  animation: moveRight 0.5s ease-in-out forwards;
+  transition: left 0.5s ease-in-out;
 }
 
-.mobile-nav-toggle {
+.mobile-nav.show-nav {
   left: 0;
+  z-index: 1;
 }
 
 #mobile-nav nav a {

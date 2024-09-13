@@ -13,7 +13,7 @@ function Nav() {
   const [mobileNav, setMobileNav] = useState(false);
 
   const toggleNav = () => {
-    setMobileNav((prevState) => !prevState);
+    setMobileNav(!mobileNav);
   };
   return (
     <>
@@ -21,7 +21,7 @@ function Nav() {
         className="container-fluid bg-white d-flex justify-content-between mt-0"
         id="heading-parent-container"
       >
-        <div className="logo-container d-flex justify-content-center align-items-center flex-row gap-1">
+        <div className="logo-container d-flex justify-content-center align-items-center flex-row gap-1 ">
           <img src={furniroLogo} alt={furniroLogo} />
           <h3 className="m-0">Furniro</h3>
         </div>
@@ -60,7 +60,9 @@ function Nav() {
 
         {!mobileNav && (
           <div
-            className="container position-absolute bg-white d-lg-none p-5 "
+            className={`container position-absolute bg-white d-lg-none p-5 ${
+              mobileNav ? "show-nav" : ""
+            }`}
             id="mobile-nav"
           >
             <nav className="d-lg-none d-flex justify-content-center flex-column align-items-center h-100">
