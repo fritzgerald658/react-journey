@@ -13,8 +13,8 @@ import { MdOutlineCompareArrows } from "react-icons/md";
 import { GoHeart } from "react-icons/go";
 import { IoShareSocial } from "react-icons/io5";
 import { GoArrowSwitch } from "react-icons/go";
-
-import { CiHeart } from "react-icons/ci";
+import { GoHeartFill } from "react-icons/go";
+<GoHeartFill />;
 
 function OurProductsCard({
   productImage,
@@ -26,10 +26,15 @@ function OurProductsCard({
   newItemBalloon,
 }) {
   const [overlay, setOverlay] = useState(false);
-
+  const [liked, setLiked] = useState(false);
   const activateOverlay = () => {
     setOverlay(true);
   };
+
+  const toggleLike = () => {
+    setLiked(!liked);
+  };
+
   return (
     <>
       <div className="card">
@@ -52,9 +57,12 @@ function OurProductsCard({
               <GoArrowSwitch size="1rem" />
               Compare
             </span>
-            <span className="d-flex justify-content-center align-items-center gap-2">
-              <GoHeart size="1rem" />
-              Like
+            <span
+              onClick={toggleLike}
+              className="d-flex justify-content-center align-items-center gap-2"
+            >
+              {!liked ? <GoHeartFill size="1rem" /> : <GoHeart size="1rem" />}
+              {!liked ? "Unlike" : "Like"}
             </span>
           </div>
         </div>
