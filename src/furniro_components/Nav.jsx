@@ -54,7 +54,7 @@ function Nav() {
         </div>
         {/* mobile nav */}
         <nav
-          onClick={toggleNav}
+          onClick={() => toggleNav()}
           className="d-lg-none d-flex align-items-center justify-content-end hamburger-menu"
         >
           {mobileNav ? (
