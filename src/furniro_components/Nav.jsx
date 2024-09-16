@@ -65,7 +65,7 @@ function Nav() {
         </nav>
 
         <div
-          className={`container mobile-nav-container position-absolute d-flex  flex-column gap-5 ${
+          className={`container mobile-nav-container position-absolute d-lg-none d-flex  flex-column gap-5 ${
             mobileNav ? "show-nav" : ""
           }`}
         >

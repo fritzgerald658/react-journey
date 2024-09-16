@@ -12,7 +12,10 @@ function SectionTwo() {
           id="section-two-header"
         >
           <h1>Browse The Range</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>
+            Explore our new furniture collection and find the perfect pieces to
+            enhance your home.
+          </p>
         </header>
         <div
           className="container d-flex justify-content-center"

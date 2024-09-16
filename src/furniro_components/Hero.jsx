@@ -17,8 +17,8 @@ function Hero() {
                   Discover Our <br /> New Collection
                 </h2>
                 <article>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                  elit tellus, luctus nec ullamcorper mattis.
+                  Refresh your home with our latest furniture. Stylish,
+                  functional pieces to elevate your space.
                 </article>
                 <button>BUY NOW</button>
               </div>
