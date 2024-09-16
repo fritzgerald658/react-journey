@@ -71,16 +71,8 @@
 
 /*----------Slick Slider-----------*/
 .slider-container {
-  height: 80vh;
   border: none;
-}
-
-.slick-slide > div {
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
-.slick-slide img {
+  clip-path: inset(-100vw -100vw -100vw 0);
 }
 
 .slick-dots button {
@@ -115,7 +107,22 @@
 }
 
 @media (max-width: 768px) {
-  /* .slick-slide img {
-    width: 100%;
-  } */
+  #left-side-content h1 {
+    font-size: 2rem;
+  }
+
+  #left-side-content button {
+    padding: 0.8rem 2rem;
+  }
+
+  .slider-container h1 {
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+    color: #333333;
+    font-weight: 700;
+  }
+
+  .slider-container img {
+    height: 70vh;
+  }
 }

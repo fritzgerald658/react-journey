@@ -30,22 +30,12 @@ function SectionFive() {
 
   //---------Slick Settings------------//
   const settings = {
-    className: "center",
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
       {
         breakpoint: 600,
         settings: {
@@ -57,6 +47,7 @@ function SectionFive() {
       {
         breakpoint: 480,
         settings: {
+          arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -67,13 +58,13 @@ function SectionFive() {
   return (
     <>
       <div
-        className="container-fluid d-flex p-5 align-items-center position-relative flex-column flex-lg-row mt-5 gap-5"
+        className="container-fluid d-flex p-5 align-items-center position-relative flex-column flex-lg-row my-5 gap-5"
         id="section-five-parent-container"
       >
         <div className="container col-12 col-lg-4" id="left-side-content">
           <h1>50+ Beautiful rooms inspiration</h1>
           <article>
-            Our designer already made a lot of beautiful prototipe of rooms that
+            Our designer already made a lot of beautiful prototype of rooms that
             inspire you
           </article>
           <button>Explore More</button>
