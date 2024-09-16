@@ -8,10 +8,10 @@ import SectionFive from "./furniro_components/SectionFive.jsx";
 function App() {
   return (
     <>
-      {/* <Nav />
+      <Nav />
       <Hero />
       <SectionTwo />
-      <OurProducts /> */}
+      <OurProducts />
       <SectionFive />
     </>
   );
