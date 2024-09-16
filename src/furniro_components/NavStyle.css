@@ -43,7 +43,7 @@ nav a {
   font-weight: 600;
 }
 
-#desktop-nav nav a::after {
+#desktop-nav a::after {
   content: "";
   height: 2px;
   background-color: var(--primary-color);
@@ -52,32 +52,34 @@ nav a {
   transition: 0.4s;
 }
 
-#desktop-nav nav a:hover::after {
+#desktop-nav a:hover::after {
   width: 90%;
 }
 
-#mobile-nav {
-  border-top: 1px solid gray;
+.hamburger-menu {
+  transition: 0.3s;
+}
+
+.mobile-nav-container {
   top: 95px;
   width: 100%;
   height: auto;
-  left: -400px;
-  z-index: 1;
-  transition: left 0.5s ease-in-out;
+  background-color: white;
+  left: -500px;
+  padding: 2rem;
+  transition: left 0.5s ease;
 }
 
-.mobile-nav.show-nav {
+.mobile-nav-container.show-nav {
   left: 0;
-  z-index: 1;
 }
 
-#mobile-nav nav a {
-  border-bottom: 1px solid gray;
+.mobile-nav-container nav a {
   width: 60vw;
   text-align: center;
 }
 
-#mobile-nav nav a:hover {
+.mobile-nav-container a:hover {
   color: #b88e2f;
 }
 @keyframes zoom {

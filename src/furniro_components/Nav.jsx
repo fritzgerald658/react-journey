@@ -7,6 +7,8 @@ import furniroSearch from "../furniro_assets/furniro-search.svg";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import { BiMenuAltRight } from "react-icons/bi";
+import { IoCloseSharp } from "react-icons/io5";
+
 import "../furniro_components/NavStyle.css";
 import { Menu } from "@mui/material";
 function Nav() {
@@ -53,40 +55,41 @@ function Nav() {
         {/* mobile nav */}
         <nav
           onClick={toggleNav}
-          className="d-lg-none d-flex align-items-center justify-content-end"
+          className="d-lg-none d-flex align-items-center justify-content-end hamburger-menu"
         >
-          {<BiMenuAltRight size="2.5rem" />}
+          {mobileNav ? (
+            <BiMenuAltRight size="2.5rem" />
+          ) : (
+            <IoCloseSharp size="2rem" />
+          )}
         </nav>
 
-        {!mobileNav && (
-          <div
-            className={`container position-absolute bg-white d-lg-none p-5 ${
-              mobileNav ? "show-nav" : ""
-            }`}
-            id="mobile-nav"
-          >
-            <nav className="d-lg-none d-flex justify-content-center flex-column align-items-center h-100">
-              <a href="#" className="text-decoration-none py-2">
-                Home
-              </a>
-              <a href="#" className="text-decoration-none py-2">
-                Shop
-              </a>
-              <a href="#" className="text-decoration-none py-2">
-                About
-              </a>
-              <a href="#" className="text-decoration-none py-2">
-                Contact
-              </a>
-            </nav>
-            <div className="d-lg-none d-flex justify-content-center gap-5 mt-5">
-              <img src={furniroAccountAlert} alt={furniroAccountAlert} />
-              <img src={furniroSearch} alt={furniroSearch} />
-              <img src={furniroHeart} alt={furniroHeart} />
-              <img src={furniroCart} alt={furniroCart} />
-            </div>
+        <div
+          className={`container mobile-nav-container position-absolute d-flex  flex-column gap-5 ${
+            !mobileNav ? "show-nav" : ""
+          }`}
+        >
+          <nav className="d-lg-none d-flex  justify-content-center align-items-center flex-column">
+            <a href="#" className="text-decoration-none">
+              Home
+            </a>
+            <a href="#" className="text-decoration-none">
+              Shop
+            </a>
+            <a href="#" className="text-decoration-none">
+              About
+            </a>
+            <a href="#" className="text-decoration-none">
+              Contact
+            </a>
+          </nav>
+          <div className="nav-icons-container d-lg-none d-flex justify-content-center align-items-center">
+            <img src={furniroAccountAlert} alt={furniroAccountAlert} />
+            <img src={furniroSearch} alt={furniroSearch} />
+            <img src={furniroHeart} alt={furniroHeart} />
+            <img src={furniroCart} alt={furniroCart} />
           </div>
-        )}
+        </div>
       </div>
     </>
   );
