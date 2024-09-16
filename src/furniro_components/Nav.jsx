@@ -58,15 +58,15 @@ function Nav() {
           className="d-lg-none d-flex align-items-center justify-content-end hamburger-menu"
         >
           {mobileNav ? (
-            <BiMenuAltRight size="2.5rem" />
-          ) : (
             <IoCloseSharp size="2rem" />
+          ) : (
+            <BiMenuAltRight size="2.5rem" />
           )}
         </nav>
 
         <div
           className={`container mobile-nav-container position-absolute d-flex  flex-column gap-5 ${
-            !mobileNav ? "show-nav" : ""
+            mobileNav ? "show-nav" : ""
           }`}
         >
           <nav className="d-lg-none d-flex  justify-content-center align-items-center flex-column">
