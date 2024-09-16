@@ -4,13 +4,15 @@ import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./app.css";
 import SectionTwo from "./furniro_components/SectionTwo.jsx";
 import OurProducts from "./furniro_components/OurProducts.jsx";
+import SectionFive from "./furniro_components/SectionFive.jsx";
 function App() {
   return (
     <>
-      <Nav />
+      {/* <Nav />
       <Hero />
       <SectionTwo />
-      <OurProducts />
+      <OurProducts /> */}
+      <SectionFive />
     </>
   );
 }

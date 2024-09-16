@@ -1,0 +1,76 @@
+:root {
+  --primary-color: #b88e2f;
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Montserrat", sans-serif;
+}
+
+#section-five-parent-container {
+  background-color: #fcf8f3;
+  height: 90vh;
+}
+/*------------------Left Side Content-----------*/
+#left-side-content h1 {
+  margin: 1rem 0;
+  font-family: var(--primary-font);
+  color: #333333;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#left-side-content article {
+  margin: 1rem 0;
+  font-family: var(--primary-font);
+  color: #616161;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#left-side-content button {
+  margin: 1rem 0;
+  font-family: var(--primary-font);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 2.25rem;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  transition: 0.4s;
+}
+
+#left-side-content button:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+/* -------------------Right Side Content------------- */
+
+#right-side-content button {
+  background-color: white;
+  border: 1px solid white;
+  margin: none;
+  padding: 0.2rem;
+  border-radius: 100%;
+  box-shadow: 0px 0px 1px gray;
+  transition: 0.4s;
+}
+
+#right-side-content button:hover {
+  border: 1px solid var(--primary-color);
+}
+
+/* -----Left Arrow------ */
+.left-arrow {
+  top: 290px;
+  left: -7px;
+}
+
+.right-arrow {
+  top: 290px;
+  right: 0px;
+}
+
+/*----------Slick Slider-----------*/
+.slick-current img {
+  height: 80vh !important;
+  transition: all 0.5s;
+}
