@@ -61,8 +61,8 @@ function OurProductsCard({
               onClick={toggleLike}
               className="d-flex justify-content-center align-items-center gap-2"
             >
-              {!liked ? <GoHeartFill size="1rem" /> : <GoHeart size="1rem" />}
-              {!liked ? "Unlike" : "Like"}
+              {liked ? <GoHeartFill size="1rem" /> : <GoHeart size="1rem" />}
+              {liked ? "Unlike" : "Like"}
             </span>
           </div>
         </div>
