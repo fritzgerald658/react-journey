@@ -5,14 +5,16 @@ import "./app.css";
 import SectionTwo from "./furniro_components/SectionTwo.jsx";
 import OurProducts from "./furniro_components/OurProducts.jsx";
 import SectionFive from "./furniro_components/SectionFive.jsx";
+import SectionSix from "./furniro_components/SectionSix.jsx";
 function App() {
   return (
     <>
-      <Nav />
+      {/* <Nav />
       <Hero />
       <SectionTwo />
       <OurProducts />
-      <SectionFive />
+      <SectionFive /> */}
+      <SectionSix />
     </>
   );
 }
