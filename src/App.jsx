@@ -13,7 +13,6 @@ function App() {
       <Hero />
       <SectionTwo />
       <OurProducts />
-      <SectionFive />
       <SectionSix />
     </>
   );
