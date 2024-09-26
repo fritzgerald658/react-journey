@@ -9,11 +9,11 @@ import SectionSix from "./furniro_components/SectionSix.jsx";
 function App() {
   return (
     <>
-      {/* <Nav />
+      <Nav />
       <Hero />
       <SectionTwo />
       <OurProducts />
-      <SectionFive /> */}
+      <SectionFive />
       <SectionSix />
     </>
   );
